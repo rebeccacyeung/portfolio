@@ -11,49 +11,37 @@ html {
 
 /* FONTS */
 @font-face {
-  font-family: "JettBrains Mono";
-  src: url("../fonts/JetBrainsMono-ExtraBold.woff2") format("woff2"); /* .. goes back a folder */
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "JettBrains Mono";
-  src: url("../fonts/JetBrainsMono-Bold.woff2") format("woff2"); /* .. goes back a folder */
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "JettBrains Mono";
-  src: url("../fonts/JetBrainsMono-Medium.woff2") format("woff2"); /* .. goes back a folder */
-  font-weight: 500;
-}
-@font-face {
-  font-family: "JettBrains Mono";
-  src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2"); /* .. goes back a folder */
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "JettBrains Mono";
-  src: url("../fonts/JetBrainsMono-ExtraLight.woff2") format("woff2"); /* .. goes back a folder */
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "JettBrains Mono";
-  src: url("../fonts/JetBrainsMono-Thin.woff2") format("woff2"); /* .. goes back a folder */
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
   font-family: "IBM Plex Serif";
   src: url("../fonts/IBMPlexSerif-Regular.ttf") format("ttf"); /* .. goes back a folder */
   font-weight: 500;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBMPlexMono-Regular.ttf") format("ttf"); /* .. goes back a folder */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBMPlexMono-Light.ttf") format("ttf"); /* .. goes back a folder */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBMPlexMono-ExtraLight.ttf") format("ttf"); /* .. goes back a folder */
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
 body {
-    font-family: 'Inter', 'JetBrains Mono', 'IBM Plex Serif', monospace;
+    font-family: 'Inter', 'IBM Plex Mono', 'IBM Plex Serif', monospace;
     background-color: #ffffff;
     color: #000000;
     line-height: 1.6;
@@ -76,7 +64,7 @@ body {
 /* Header */
 .header {
     padding: 1.5rem 0 1rem;
-    border-bottom: 0.06rem solid #666666;
+    border-bottom: 0.06rem solid #444444;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,6 +73,9 @@ body {
     z-index: 1000;
 }
 
+.intro {
+   padding: 1rem;
+}
 .nav {
     display: flex;
     justify-content: space-between;
@@ -92,12 +83,12 @@ body {
 }
 
 .nav-left {
-    font-family: "JettBrains Mono", monospace;
+    font-family: "IBM Plex Mono", monospace;
     font-size: 1rem;
     color: #666666;
     letter-spacing: -0.015rem;
     list-style: none;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .nav-links {
@@ -105,11 +96,12 @@ body {
     gap: 3rem;
     list-style: none;
     color: #666666;
-    font-weight: 300;
+    font-weight: 400;
 }
 
+
 .nav-links a {
-    font-family: 'JettBrains Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 1rem;
     color: rgba(0, 0, 0, 0.6);
     text-decoration: none;
@@ -152,10 +144,13 @@ body {
     }
     
     .nav-left a {
-        font-size: 0.5rem;
+        font-size: 0.75rem;
     }
     .nav-links a {
-        font-size: 0.5rem;
+        font-size: 0.75rem;
+    }
+    .header {
+        padding: 1rem 0 0.5rem;
     }
 }
 
@@ -174,7 +169,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     justify-content: center;
 }
 
@@ -193,10 +188,10 @@ body {
 .tagline {
     font-size: 2.5rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.25;
     margin-bottom: 2.625rem;
     max-width: 50rem;
-    word-spacing: 2;
+    word-spacing: 1;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -205,8 +200,9 @@ body {
 .highlight {
     color: #FF6A00;
     font-family: "IBM Plex Serif", serif;
-    font-weight: 500;
+    font-weight: medium;
     font-style: italic;
+    font-size: 3rem;
 }
 
 .employment {
@@ -259,9 +255,15 @@ body {
     }
 }
 
+@media (max-width: 64rem) {
+    .highlight {
+        font-size: 2rem;
+    }
+}
+
 /* Projects Section */
 .projects {
-    padding: 6rem 0 1rem;
+    padding: 4rem 0 1rem;
 }
 
 .projects-grid {
@@ -285,17 +287,20 @@ body {
     height: 100%;
     background-color: rgba(33, 33, 33, 0);
     pointer-events: none;
-    border-radius: 0.3rem;
+    border-radius: 0.05rem
+    
 }
 
 .project-card:hover .project-image::after {
     background-color: rgba(33, 33, 33, 0.3);
+    transition: ease 0.5s;
 }
 
 .project-image {
     width: 100%;
     aspect-ratio: 1.1;
-    border-radius: 0.3rem;
+    border-radius: 0.05rem;
+    border-color: #666666;
     overflow: hidden;
     margin-bottom: 1.5rem;
     display: flex;
@@ -318,13 +323,38 @@ body {
     object-position: top;
 }
 
+.orange-bg {
+    position: relative;
+}
+
 .orange-bg img {
-    width: 90%;
+    width: 87%;
     height: auto;
-    margin-top: 9rem;
+    margin-top: 11.5rem;
     object-fit: contain;
     object-position: top;
 }
+
+.orange-bg video {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33%;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
+    border-radius: 1.4rem;
+    z-index: 1;
+    margin-top: 2.5rem;
+    box-shadow: 0 0 0.3rem rgba(255, 106, 0, 0.4),
+            0 0 0.5rem rgba(255, 106, 0, 0.3),
+            0 0 0.7rem rgba(255, 106, 0, 0.2);
+}
+
+.orange-bg video:hover {
+    filter: brightness(0.9);
+}  
 
 .orange-bg {
     background: #FF690B;
@@ -343,23 +373,28 @@ body {
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 0.75rem;
+    margin-top: -0.5rem;
     flex-wrap: wrap;
     gap: 0.75rem;
     font-weight: 300;
-    font-family: "JettBrains Mono", monospace;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 .project-info h3 {
     font-size: 1.875rem;
     font-weight: 500;
-    letter-spacing: -0.01875rem;
+    letter-spacing: -0.02rem;
     font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
 
 .project-meta {
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     color: rgba(0, 0, 0, 0.6);
     letter-spacing: -0.01125rem;
+    margin-right: -0.75rem;
+    font-weight: 400;
+
 }
 
 .project-description {
@@ -368,6 +403,7 @@ body {
     color: rgba(0, 0, 0, 0.6);
     letter-spacing: -0.0125rem;
     font-weight: 300;
+    margin-top: -0.5rem;
 }
 
 @media (max-width: 64rem) {
@@ -378,6 +414,20 @@ body {
 
     .project-card:last-child {
         grid-column: 1;
+    }
+
+    .orange-bg img {
+        width: 90%;
+        margin-top: 11.5rem;
+    }
+
+    .orange-bg video {
+        width: 38%;
+        margin-top: 2rem;
+    }
+
+    .project-description {
+        font-size: 1rem;
     }
 }
 
@@ -393,11 +443,41 @@ body {
     .project-description {
         font-size: 1.125rem;
     }
+
+    .orange-bg img {
+        width: 95%;
+        margin-top: 9rem;
+    }
+
+    .orange-bg video {
+        width: 45%;
+        margin-top: 1.5rem;
+        top: 3rem;
+        border-radius: 0.75;
+    }
+
+    .project-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .orange-bg img {
+        width: 90%;
+        margin-top: 6rem;
+    }
+
+    .orange-bg video {
+        width: 40%;
+        margin-top: 1rem;
+        top: 2rem;
+        border-radius: 0.75rem;
+    }
 }
 
 /* Footer */
 .footer {
-    padding: 10rem 0 3rem;
+    padding: 10rem 0 1.5rem;
 }
 
 .footer-content {
@@ -419,9 +499,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-     margin-bottom: 0.001rem;
+    margin-bottom: 0.001rem;
+    transition: transform 20ms ease, opacity 20ms ease;
 }
 
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
 
 .footer-text {
     font-size: 1rem;
@@ -430,5 +515,11 @@ body {
     letter-spacing: -0.02rem;
 }
 
-
-
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #444444;
+    text-align: center;
+    letter-spacing: -0.02rem;
+    font-weight: 400;
+    margin-top: -0.75rem;
+}
