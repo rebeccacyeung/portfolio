@@ -1,180 +1,402 @@
-* {
-    box-sizing: border-box;
+html {
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: "Figtree", sans-serif;
-    color: black;
-    background-color: white;
-    background: white;
-    line-height: 1.5;
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.main {
-    max-width: 62.5rem;
-    margin: 8rem auto 4rem;
-    font-family: "Figtree", sans-serif;
-    color: black;
+/* FONTS */
+@font-face {
+  font-family: "IBM Plex Serif";
+  src: url("../fonts/IBMPlexSerif-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBMPlexMono-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBMPlexMono-Light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBMPlexMono-ExtraLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+    font-family: 'Inter', 'IBM Plex Mono', 'IBM Plex Serif', monospace;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 107.5rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 48rem) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Header */
+.header {
+    padding: 1.5rem 0 1rem;
+    border-bottom: 0.06rem solid #444444;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: white;
-    line-height: 1.5;
+    z-index: 1000;
 }
 
-/* ABOUT SECTION */
-
-.about-title h1 {
-    line-height: 2.5rem;
-    font-weight: 200;
-    margin-bottom: 1rem;
-    word-spacing: 1;
+.intro {
+   padding: 1rem;
 }
-
-/* ABOUT SECTION */
-.about-section {
-    max-width: 62.5rem;
-    margin: 8rem auto 4rem;
-    padding: 0 1rem;
+.nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 -10rem;
+}
+
+.nav-left {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    color: #666666;
+    letter-spacing: -0.015rem;
+    list-style: none;
+    font-weight: 400;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    color: #666666;
+    font-weight: 400;
+}
+
+
+.nav-links a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    letter-spacing: -0.015rem;
+}
+
+.nav-links a:hover {
+    color: #FF6A00;
+}
+
+.nav-left a:hover {
+    color: #FF6A00;
+}
+
+.nav-links a:visited,
+.nav-left a:visited {
+    color: inherit;
+}
+
+.nav-links a,
+.nav-left a {
+    color: #666; 
+    text-decoration: none;
+}
+
+.nav-links a:visited,
+.nav-left a:visited {
+    color: (rgb(0,0,0,0.6)); 
+}
+
+.nav-links a:hover,
+.nav-left a:hover {
+    color: #FF6A00; 
+}
+
+@media (max-width: 48rem) {
+    .nav-links {
+        gap: 1.5rem;
+    }
+    
+    .nav-left a {
+        font-size: 0.75rem;
+    }
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+    .header {
+        padding: 1rem 0 0.5rem;
+    }
+}
+
+/* ── ABOUT SECTION ── */
+.about-section {
+  max-width: 70rem;
+  margin: 9rem auto 5rem;
+  padding: 0 2rem;
 }
 
 .about-container {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 4rem;
-    width: 100%;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  width: 100%;
+  align-items: start;
 }
 
+/* LEFT — text */
 .about-title h1 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    color: #193CB8;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02rem;
 }
 
 .about-text {
-    font-size: 1.2rem;
-    line-height: 1.55;
-    margin-bottom: 1.5rem;
-    max-width: 38rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
+.about-text:last-of-type {
+  margin-bottom: 0;
+}
+
+/* RIGHT — photo */
 .about-photo {
-    margin-top: 6rem;
-    width: 100%;
-    max-width: 22rem;
-    border-radius: 1rem;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 32rem;
+  border-radius: 0.4rem;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
+/* ── EXPERIENCE SECTION ── */
+.section-label {
+  display: block;
+  max-width: 70rem;
+  margin: 4rem auto 0;
+  padding: 0 2rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #7C86FF;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: 'IBM Plex Mono', monospace;
+}
 
-/* EXPERIENCE SECTION */
 .experience-section {
-    margin-top: 1rem;
-    max-width: 62.5rem;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section-lable {
-    max-width: 62.5rem;
-    width: 100%;
-    margin: 6rem auto 1rem;   
-    font-size: 1rem;
-    font-weight: 300;
-    padding-bottom: 0.5rem;
-    text-transform: uppercase;
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto 6rem;
+  padding: 0 2rem;
 }
 
 .experience-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1.25rem 0;
+  border-top: 0.0625rem solid #E8E8E8;
+}
 
+.experience-item:last-of-type {
+  border-bottom: 0.0625rem solid #E8E8E8;
 }
 
 .exp-left {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .exp-company {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  letter-spacing: -0.01rem;
 }
 
 .exp-role {
-    font-size: 1.1rem;
-    color: #A1A1A1;
-    margin: 0;
+  font-size: 0.95rem;
+  color: #A1A1A1;
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
 }
 
 .exp-right {
-    font-size: 1.1rem;
-    font-weight: 500;
-    white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #000;
+  font-family: 'Inter', sans-serif;
 }
 
+/* Footer */
+.footer {
+    padding: 10rem 0 1.5rem;
+}
 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 0.001rem;
+}
+
+.social-icon {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.001rem;
+    transition: transform 20ms ease, opacity 20ms ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: #000000;
+    text-align: center;
+    letter-spacing: -0.02rem;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #444444;
+    text-align: center;
+    letter-spacing: -0.02rem;
+    font-weight: 400;
+    margin-top: -0.75rem;
+}
+
+/* ── RESPONSIVE: mobile (≤48rem) ── */
 @media (max-width: 48rem) {
+  .about-section {
+    margin-top: 7rem;
+    padding: 0 1.5rem;
+  }
 
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
+  .about-container {
+    grid-template-columns: 1fr;  /* stack to single column */
+    gap: 2rem;
+  }
 
-    .about-title h1 {
-        font-size: 2rem;
-        margin-top: 2rem;
-    }
+  .about-right {
+    order: -1;                   /* photo above text */
+  }
 
-    .about-text {
-        font-size: 1.1rem;
-    }
+  .about-photo {
+    max-height: 22rem;
+    width: 100%;
+  }
 
-    .about-photo {
-        margin: 0 auto;
-        max-width: 18rem;
-    }
+  .about-title h1 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
 
-    .experience-item {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+  .about-text {
+    font-size: 1rem;
+  }
 
-    .exp-right {
-        font-size: 1rem;
-    }
+  .section-label {
+    padding: 0 1.5rem 0.75rem;
+    margin-top: 3rem;
+  }
+
+  .experience-section {
+    padding: 0 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .experience-item {
+    align-items: flex-start;
+  }
 }
 
+/* ── RESPONSIVE: small mobile (≤30rem) ── */
 @media (max-width: 30rem) {
+  .about-section {
+    padding: 0 1rem;
+    margin-top: 5.5rem;
+    margin-bottom: 3rem;
+  }
 
-    .about-title h1 {
-        font-size: 1.6rem;
-    }
+  .about-title h1 {
+    font-size: 1.75rem;
+  }
 
-    .about-text {
-        font-size: 1rem;
-    }
+  .about-text {
+    font-size: 0.95rem;
+  }
 
-    .about-photo {
-        max-width: 16rem;
-    }
+  .about-photo {
+    max-height: 18rem;
+  }
 
-    .exp-company {
-        font-size: 1.1rem;
-    }
+  .section-label {
+    padding: 0 1rem 0.75rem;
+    font-size: 0.85rem;
+  }
 
-    .exp-role,
-    .exp-right {
-        font-size: 0.95rem;
-    }
+  .experience-section {
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .exp-company {
+    font-size: 1rem;
+  }
+
+  .exp-role,
+  .exp-right {
+    font-size: 0.875rem;
+  }
 }

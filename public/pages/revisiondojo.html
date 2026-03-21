@@ -7,58 +7,69 @@
     <link rel="stylesheet" href="../css/landing.css" />
     <link rel="stylesheet" href="../css/revisiondojo.css" />
   </head>
+
   <body>
 
-    <!-- NAVBAR -->
-    <header class="site-header">
-        <div class="nav-left">
-          <a href="../../index.html">Rebecca Yeung</a>
+      <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-left">
+                    <li><a href="../../index.html">Rebecca Yeung</a></li>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html#work">Work</a></li>
+                    <li><a href="../../public/pages/about.html">About</a></li>
+                    <li><a href="../../public/assets/rebecca-yeung-resume.pdf">Resume</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="nav-right">
-          <a href="../../index.html#work">Work</a>
-          <a href="about.html">About</a>
-          <a href="../assets/resume.pdf">Resume</a>
-        </nav>
-    </header>   
+    </header>
 
+    <!-- HAMBURGER (mobile) -->
+    <button class="hamburger" id="menuBtn" aria-label="Open navigation">☰</button>
+    <div class="sidebar-overlay" id="overlay"></div>
 
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <a href="../../index.html">← HOME</a>
+      <a href="#overview">OVERVIEW</a>
+      <a href="#problem">PROBLEM</a>
+      <a href="#insights">KEY INSIGHTS</a>
+      <a href="#solution">SOLUTION</a>
+      <a href="#validation">SOLUTION VALIDATION</a>
+      <a href="#decisions">DESIGN DECISIONS</a>
+      <a href="#takeaway">REFLECTION</a>
+    </aside>
 
-    <!-- PAGE CONTENT -->
+    <div class="hero">
+      <img
+        src="../assets/hero-image.svg"
+        alt="RevisionDojo Header"
+        height="140px"
+      />
+    </div>
+
+   <!-- PAGE CONTENT -->
     <main class="page-content">
-
       <div class="container main">
-        <h1>RevisionDojo</h1>
-
-        <!-- HERO IMG -->
-        <div class="video">
-          <video 
-            src="../assets/hero-video.mp4" 
-            width="900"
-            height="550"
-            autoplay
-            loop
-            muted
-            playsinline
-            aria-labelledby="hero-video-desc"
-          ></video>
-        </div>
-
-        <p id="hero-video-desc" class="visually-hidden">
-          This is a motion animation showcasing how the feature works.”
-        </p>
-
 
         <!-- OVERVIEW -->
-        <section class="section-lable">OVERVIEW</section>
+        <h1 id="overview">RevisionDojo</h1>
+
+        <section class="section-label"></section>
 
         <section class="overview-grid">
           <div>
-            <h2>TIMELINE</h2>
-            <p>Sept - Dec 2025</p>
+            <h2>Timeline</h2>
+            <p>Sept – Dec 2025</p>
           </div>
-
           <div>
-            <h2>TEAM</h2>
+            <h2>Role</h2>
+            <p>UX Researcher + Designer</p>
+          </div>
+          <div>
+            <h2>Team</h2>
             <ul class="stack">
               <li>Caleb Wu</li>
               <li>Amy Zhao</li>
@@ -66,210 +77,197 @@
               <li>Jessica Chan</li>
             </ul>
           </div>
-
           <div>
-            <h2>ROLE</h2>
-            <p>UX Researcher</p>
-          </div>
-
-          <div>
-            <h2>SKILLS</h2>
+            <h2>Skills</h2>
             <ul class="stack">
-              <li>Figma</li>
-              <li>User Interviews</li>
-              <li>Usability Testing</li>
+              <li>User Research</li>
+              <li>Product Design</li>
+              <li>Interaction Design</li>
             </ul>
           </div>
         </section>
 
-        <!-- STARTING POINT -->
+        <section class="section-label">Overview</section>
 
-        <section class="section-lable">STARTING POINT</section>
-
-        <!-- CLIENT -->
         <section class="text-section">
-          <h2>Our Client</h2>
+          <h2>How we can support RevisionDojo's rapid user growth?</h2>
           <p>
-         RevisionDojo is the fastest-growing educational technology startup serving over 300,000 users, focused on supporting IB and SAT students through various practice methods. 
+            RevisionDojo is the fastest-growing ed-tech startup serving 400,000+ users, focused on supporting IB and SAT students.
           </p>
-
+          <p>
+            My team and I developed a scalable navigation system to help users navigate the product as it continues to scale.
+          </p>
           <div class="small-img">
             <img
               src="../assets/discover-tab.png"
-              width="430"
-              height="360"
               alt="RevisionDojo Searchbar Modal"
             />
-
-            <img 
-            src="../assets/jojo.png" 
-            width="430" 
-            height="360" 
-            alt="Jojo" />
+            <img
+              src="../assets/jojo.png"
+              alt="Jojo mascot"
+            />
           </div>
-       
+        </section>
 
+        <!-- PROBLEM -->
+        <section class="section-label" id="problem">Problem</section>
+
+        <section class="text-section">
           <div>
-            <h2>The Problem</h2>
+            <h2>RevisionDojo has 500+ features, but no clear way to surface them...</h2>
             <p>
-              RevisionDojo is leading the IB edtech space, constantly launching new features, with over 7+ released in a single month. However, there is no infrastructure to sustain this fast-paced growth, leading to new features and content often getting buried in the crowded navigation bar
+              As an ed-tech tool, RevisionDojo launches 7+ features per month. However, it lacks the infrastructure to sustain this fast-paced growth, causing new features and content to get buried in an increasingly crowded navigation bar.
             </p>
           </div>
-
           <div class="content-box">
-            <h4 class="label">DESIGN FOCUS</h4>
-            <p class="focus-text">“Help IB students surface the right content at the right time”</p>
+            <div class="content-box-inner">
+              <img src="../assets/think-cloud.svg" alt="thinking icon">
+              <p class="focus-text">"Help IB students surface the right content at the right time"</p>
+            </div>
           </div>
+          <img src="../assets/user-journey.svg" alt="Analysis of bottlenecks in the user journey">
+        </section>
 
+        <!-- KEY INSIGHTS -->
+        <section class="section-label" id="insights">Key Insights</section>
+
+        <div class="research-container">
+          <div class="finding-box">
+            <h1>10%</h1>
+            <h5>of the website is fully being utilized by users</h5>
+          </div>
+          <div class="finding-box">
+            <h1>85%</h1>
+            <h5>of students arrive with a specific goal in mind</h5>
+          </div>
+          <div class="finding-box">
+            <h1>70%</h1>
+            <h5>of users drop off the website after the first week</h5>
+          </div>
+        </div>
+
+        <!-- SOLUTION -->
+        <section class="section-label" id="solution">Solution</section>
+
+        <section class="text-section">
           <div>
-            <h2>The Solution</h2>
+            <h2>An omnidirectional search bar.</h2>
             <p>
-              An omnidirectional search bar modal that lives on any page of the app, enabling IB students to navigate RevisionDojo while effectively surfacing the features and content they are looking for. 
+              A search bar modal that lives on any page of the app, enabling students to navigate RevisionDojo while effectively surfacing the features and content they are looking for.
             </p>
           </div>
-
-          <div class="video">
-            <video 
-              src="../assets/walk-through-video.mp4" 
-              width="900" 
-              height="545"
-              autoplay 
-              loop 
-              muted 
-              playsinline
-              aria-labelledby="walkthrough-video-desc"
-            ></video>
+          <div class="video-wrapper">
+            <div class="video">
+              <video
+                src="../assets/walk-through-video.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                aria-labelledby="walkthrough-video-desc"
+              ></video>
+            </div>
           </div>
-
           <p id="walkthrough-video-desc" class="visually-hidden">
-            This is a walk-though video on the solution for the project we made. 
+            Walk-through video of the omnidirectional search bar solution.
           </p>
-
-
-
-
         </section>
 
         <!-- SOLUTION VALIDATION -->
-        <section class="section-lable">SOLUTION VALIDATION</section>
+        <section class="section-label" id="validation">Solution Validation</section>
 
-         <section class="text-section">
-
-            <div class="research-goals">
-              <h2 class="section-title">Research Goals</h2>
-
-              <div class="content-box">
-                <h3 class="label">GOAL 1</h3>
-                <p class="focus-text">Establish how users feel while trying to search for prompts</p>
-              </div>
-
-              <div class="content-box">
-                <h3 class="label">GOAL 2</h3>
-                <p class="focus-text">Determine areas of struggle using the application and gather pinpoint they are struggling with</p>
-              </div>
-
-              <div class="content-box">
-                <h3 class="label">GOAL 3</h3>
-                <p class="focus-text">Understand the user motivations for searching for subjects/features</p>
-              </div>
-            </div>
-
-            <div class="user-testing">
-              <h2 class="section-title">User Testing</h2>
-              <p>
-                To validate our assumptions, I conducted user tests of our solution with six former IB students, some familiar with RevisionDojo. The questions focused on understanding why users acted as they did when interacting with the feature, revealing how they navigated the interface and whether they would actually use the tool.
-              </p>
-            </div>
-
-          <div class="user-testing-section">
-            <p class="user-testing-title">Some user testing questions:</p>
-
-            <div class="user-testing-questions">
-              <div class="question-card">
-                <p>Are you able to explain to me what you think is happening on the page?</p>
-              </div>
-
-              <div class="question-card">
-                <p>You are unsure what you are looking for. What on this screen are you inclined to press? Why?</p>
-              </div>
-
-              <div class="question-card">
-                <p>If you were studying for IB, how might you find this tool helpful? Why?</p>
-              </div>
-            </div>
-          </div>
-
-          <p>
-            To gather further insights, I ran a series of A/B tests: in one test, users were guided through a more structured set of tasks, while in the other, they were allowed to explore the interface freely, with the same guiding questions asked along the way.
-          </p>
-
+        <section class="text-section">
           <div>
-              <h2>User Test Outcomes</h2>
-              <p>
-                The virtual user tests revealed common pain points, such as broadening the search to include syllabus acronyms, more intuitive result highlighting, and additional filters for error states. I found feedback from interviewing designers focused more on UI and the nitty-gritty, while non-designers provided intuitive, user-centred insights.
-              </p>
-          </div>
+            <h2>Researching user painpoints.</h2>
+            <p>
+              To clear my own assumptions, I affinity mapped all our user research to understand why users dropped off and the study habits of IB and SAT students.
+            </p>
+            <img src="../assets/research-initial.svg" alt="Affinity map of user research findings">
 
-          <div class="small-img">
-            <img
-              src="../assets/before.png"
-              width="430"
-              height="360"
-              alt="UI before UX changes"
-            />
-
-            <img 
-            src="../assets/after.png" 
-            width="430" 
-            height="360" 
-            alt="UI after UX changes" />
-          </div>
-
-          <div>
-              <h2>Impact</h2>
-              <p>
-                During testing, users prioritized efficiency, which guided the UX changes to make the app as intuitive and clear as possible. Our goal was to design RevisionDojo to adapt seamlessly to the needs of busy, ambitious IB students.
-              </p>
-          </div>
-
-          <div class="content-box">
-            <h4 class="label">USER QUOTE</h4>
-            <p class="focus-text">“This is a novel UI convention”</p>
+            <h2>Validated our navigation system through user testing.</h2>
+            <p>
+              I ran usability tests with six former IB students, including some familiar with RevisionDojo. The user test explored how users navigated the interface, why they made certain choices, and whether they would use the tool.
+            </p>
+            <p>
+              To gather further insights, I ran A/B usability tests: one group completed structured tasks, while the other explored freely, using the same guiding questions throughout.
+            </p>
+            <img src="../assets/user-interviews.svg" alt="User interview synthesis">
+            <p>
+              User tests surfaced key pain points, including support for syllabus acronyms, clearer result highlighting, and better filters for error states.
+            </p>
           </div>
         </section>
 
+        <!-- DESIGN DECISIONS -->
+        <section class="section-label" id="decisions">Design Decisions</section>
 
-        <!-- CONCLUSION -->
-        <section class="section-lable">SOLUTION VALIDATION</section>
-
-       <section class="text-section">
-
-        <div>
-              <h2>Takeaways</h2>
+        <section class="text-section">
+          <div class="decision-row">
+            <div>
+              <h2>Filtered searches for faster navigation.</h2>
               <p>
-                Validate your assumption! During our research and ideation, we let a lot of our assumptions fill in the gaps for our solutions. Part of the reason we kept refraining from our solutions was due to constantly finding holes in our research, which created gaps in our research. I learned to validate, validate, validate our process through secondary research and user testing, to cover all grounds. 
+                Users can filter by subject, practice type, and topic, improving navigation and enhancing discoverability.
               </p>
+            </div>
+            <img src="../assets/filtered-navigation.svg" alt="Filtered navigation UI">
           </div>
-
-       </section>
-
-        <!-- FOOTER -->
-         <footer class="site-footer page-content">
-          <div class="footer-left">
-            <p class="footer-heading">Glad we crossed paths</p>
-            <p class="footer-subheading">Hope it left you with a bit of curiosity and inspiration</p>
+          <div class="decision-row">
+            <div>
+              <h2>Highlighting keywords for clearer search results.</h2>
+              <p>
+                To help distinguish between multiple topics containing the same words, highlighted words appear as the user types, filtering the best match to the top.
+              </p>
+            </div>
+            <img src="../assets/highlight-keywords.svg" alt="Keyword highlighting UI">
           </div>
+        </section>
 
-          <div class="footer-right">
-            <a href="https://linkedin.com/in/rebecca-yeung-" target="_blank">LinkedIn</a>
-            <a href="../assets/resume.pdf" target="_blank">Resume</a>
-            <a href="mailto:rcy3@sfu.ca">Email</a>
+        <!-- REFLECTION -->
+        <section class="section-label" id="takeaway">Reflection</section>
+
+        <section class="text-section">
+          <div>
+            <h2>Good design isn't always new; it's what works.</h2>
+            <p>
+              You don't always have to reinvent the wheel to solve a problem; sometimes the best approach is to build on what already works. After weeks of research and product development, I learned that the simplest solutions are often the most effective.
+            </p>
           </div>
-      </footer>
+        </section>
+
+        <section class="text-section">
+          <div>
+            <h2>Keep testing and testing and testing again.</h2>
+            <p>
+              User testing is a designer's best friend. Testing our solution helped us validate all our assumptions and fill the knowledge gaps that secondary research couldn't address.
+            </p>
+          </div>
+        </section>
+
       </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="social-icons">
+            <a href="https://linkedin.com/in/rebecca-yeung-" aria-label="LinkedIn" class="social-icon">
+              <img src="../assets/linkedin.svg" alt="LinkedIn" width="35" height="35">
+            </a>
+            <a href="mailto:rcy3@sfu.ca" aria-label="Email" class="social-icon">
+              <img src="../assets/mail.svg" alt="Email" width="35" height="35">
+            </a>
+          </div>
+          <p class="footer-text">Design and coded by me!</p>
+          <h6 class="footer-copyright">Rebecca Yeung © 2026</h6>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
+
+    
 
 
 
