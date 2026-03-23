@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebecca Yeung - Portfolio</title>
+    <link rel="stylesheet" href="../css/landing.css" />
+    <link rel="stylesheet" href="../css/strava.css" />
+  </head>
+
+  <body>
+
+      <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-left">
+                    <li><a href="../../index.html">Rebecca Yeung</a></li>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html#work">Work</a></li>
+                    <li><a href="../../public/pages/about.html">About</a></li>
+                    <li><a href="../../public/assets/rebecca-yeung-resume.pdf">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HAMBURGER (mobile) -->
+    <button class="hamburger" id="menuBtn" aria-label="Open navigation">☰</button>
+    <div class="sidebar-overlay" id="overlay"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <a href="../../index.html">← HOME</a>
+      <a href="#overview">OVERVIEW</a>
+      <a href="#problem">PROBLEM</a>
+      <a href="#insights">KEY INSIGHTS</a>
+      <a href="#solution">SOLUTION</a>
+      <a href="#validation">VALIDATION</a>
+      <a href="#takeaway">REFLECTION</a>
+    </aside>
+
+    <div class="hero">
+        <img src="../assets/strava-hero.svg" alt="Strava interface">
+    </div>
+
+   <!-- PAGE CONTENT -->
+    <main class="page-content">
+      <div class="container main">
+
+        <!-- OVERVIEW -->
+        <h1 id="overview">Strava Feature Design</h1>
+
+        <section class="section-label"></section>
+
+        <section class="overview-grid">
+          <div>
+            <h2>Timeline</h2>
+            <p>Fall 2025, 3 weeks</p>
+          </div>
+          <div>
+            <h2>Role</h2>
+            <p>UX/UI Designer</p>
+          </div>
+          <div>
+            <h2>Team</h2>
+            <ul class="stack">
+              <p>4 Designers</p>
+            </ul>
+          </div>
+          <div>
+            <h2>Skills</h2>
+            <ul class="stack">
+              <li>User Research</li>
+              <li>UX/UI Designer</li>
+              <li>Prototype</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section-label">Overview</section>
+
+        <section class="text-section">
+          <h2>How can Strava be a one-stop shop for athletes?</h2>
+          <p>
+            Strava is a performance tracking app for serving as a digital platform and community for athletes. My team and I developed a workout builder feature to help athletes curate their own personal workouts. 
+          </p>
+          <div class="big-img">
+             <img src="../assets/strava-mockup.svg" alt="mockup of strava design solution">
+          </div>
+        </section>
+
+        <!-- PROBLEM -->
+        <section class="section-label" id="problem">Problem</section>
+
+        <section class="text-section">
+          <div>
+            <h2>There is no feature to support workout planning…</h2>
+            <p>
+              Strava lacks a system to plan non-cardio workouts, creating a fragmented experience that forces users to rely on external apps for strength training. This disconnect hinders Strava's ability to be a comprehensive fitness platform, limiting user engagement and retention.
+            </p>
+        </section>
+
+        <!-- KEY INSIGHTS -->
+        <section class="section-label" id="insights">Key Insights</section>
+            <h2>After interviewing 6 users, it revealed:</h2>
+
+        <div class="research-container">
+          <div class="finding-box">
+            <h1>83%</h1>
+            <h5>of users switch between multiple apps to plan and track workouts</h5>
+          </div>
+          <div class="finding-box">
+            <h1>66%</h1>
+            <h5>of users felt the paywall blocked features they would use</h5>
+          </div>
+          <div class="finding-box">
+            <h1>50%</h1>
+            <h5>of usuers enjoy the social and sharing feature of Strava</h5>
+          </div>
+        </div>
+
+       <!-- SOLUTION -->
+        <section class="section-label" id="solution">Solution</section>
+
+        <section class="text-section">
+
+         <!-- Solution 1 -->
+          <div>
+            <h2>An all-in-one workout builder and planner.</h2>
+            <p>
+              A workout builder lets users plan cross-training sessions, then track and share them, all within Strava. The feature includes a workout builder for creating custom workouts, a workout planner for scheduling sessions, and a workout tracker for logging performance. This solution enhances Strava's value as a comprehensive fitness platform, improving user engagement and retention.
+            </p>
+          </div>
+
+          <div class="video-wrapper">
+            <video
+              src="../assets/solution-walkthrough.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              aria-labelledby="walkthrough-video-desc"
+            ></video>
+
+            <img src="../assets/solution-1-img.svg"
+              alt="solution 1 background image">
+          </div>
+
+          <!-- Solution 2 -->
+          <div class="solution-section">
+            <h2>Share and schedule.</h2>
+            <p>
+              To maintain the social aspect of the workout builder, I introduced a share and schedule feature that lets users send curated workout plans to friends and schedule sessions together. 
+            </p>
+            <p>
+              This preserves the social motivation interviewees were excited about, while adding practical planning functionality.
+            </p>
+          </div>
+
+          <div class="video-wrapper">
+            <video
+              src="../assets/share.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              aria-labelledby="walkthrough-video-desc"
+            ></video>
+            <img src="../assets/solution-2-img.svg"
+              alt="solution 2 background image">
+          </div>
+
+          <!-- Solution 3 -->
+          <div class="solution-section">
+            <h2>Colour coded blocks.</h2>
+            <p>
+              Exercises are labeled and colour-coded, with each colour tied to the custom block builder, helping users instantly recognize the type of activity they’re engaging in through consistent visual cues.
+            </p>
+          </div>
+
+          <div class="video-wrapper">
+            <video
+              src="../assets/strava-video-home.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              aria-labelledby="walkthrough-video-desc"
+            ></video>
+            <img src="../assets/solution-3-img.svg"
+              alt="solution 3 background image">
+          </div>
+
+          <p id="walkthrough-video-desc" class="visually-hidden">
+            Walk-through video of the Strava workout builder feature, showcasing the user flow and key interactions.
+          </p>
+
+        </section>
+
+        <!-- SOLUTION VALIDATION -->
+        <section class="section-label" id="validation">Validation</section>
+
+        <section class="text-section">
+          <div>
+            <h2>Conducted 6 user interviews to gather user behaviours.</h2>
+            <p>
+              To get a better understanding of users painpoints, I conducted through user interviews with past and present Strava users. Common painpoint among users were the need to use multiple platforms to plan workouts and a want for more social features. 
+            </p>
+            <img src="../assets/strava-research.svg" alt="User interview synthesis">
+          </div>
+        </section>
+
+        <!-- REFLECTION -->
+        <section class="section-label" id="takeaway">Reflection</section>
+
+        <section class="text-section">
+          <div>
+            <h2>Do your research, and a lot of it.</h2>
+            <p>
+              You don't always have to reinvent the wheel to solve a problem; sometimes the best approach is to build on what already works. After weeks of research and product development, I learned that the simplest solutions are often the most effective.
+            </p>
+          </div>
+        </section>
+
+        <section class="text-section">
+          <div>
+            <h2>Communication, timelines and delegation are key.</h2>
+            <p>
+              3 weeks and not a single call. We simply relied on clear communication about each other's external priorities and keeping each other up to date on progress.
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="social-icons">
+            <a href="https://linkedin.com/in/rebecca-yeung-" aria-label="LinkedIn" class="social-icon">
+              <img src="../assets/linkedin.svg" alt="LinkedIn" width="35" height="35">
+            </a>
+            <a href="mailto:rcy3@sfu.ca" aria-label="Email" class="social-icon">
+              <img src="../assets/mail.svg" alt="Email" width="35" height="35">
+            </a>
+          </div>
+          <p class="footer-text">Design and coded by me!</p>
+          <h6 class="footer-copyright">Rebecca Yeung © 2026</h6>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
